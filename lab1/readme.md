@@ -151,7 +151,7 @@ a.	Пример конфигурации приведен ниже. Параме
 
 ..........................
 
-![image](https://github.com/larakor/Network-/assets/164779961/22ace2a2-42d5-4dc3-badf-80a8e9ca0cd9)
+![image](https://github.com/larakor/Network-/assets/164779961/d79bb25e-6685-42b2-9bf8-12146e6b759f)
 
 a.	Проверьте параметры VLAN 1.
 S1# show interface vlan 99
