@@ -18,11 +18,27 @@
 
 Заполните приведенные ниже таблицы, зная заданный IPv4-адрес, исходную и новую маску подсети.
 
-**Проблема1:**
-
-![image](https://github.com/larakor/Network-/assets/164779961/f2e67e5e-a4b1-4656-83f9-0c5035b79618)
+![image](https://github.com/user-attachments/assets/87047fed-68aa-479f-99f2-d71e470cc851)
 
 
+![image](https://github.com/user-attachments/assets/79f75b6a-f42f-4432-8d7a-49cb08706319)
+
+
+![image](https://github.com/user-attachments/assets/64505983-121c-48b9-bd5e-565343ce4496)
+
+
+![image](https://github.com/user-attachments/assets/2492b6c9-e0bd-4873-88d6-1e957d51c8c3)
+
+
+![image](https://github.com/user-attachments/assets/363ca091-0eb7-4ced-a9f9-5bd50209be35)
+
+
+![image](https://github.com/user-attachments/assets/11bf0a20-eed7-4db0-8151-de7fc8ee7f1e)
+
+
+
+Вопрос для повторения
+Почему маска подсети так важна при анализе IPv4-адреса? – Маска подсети позволяет делить сеть на большое количество более мелких сетей, одна ее часть будет определять адрес подсети, а другая назначена устройствам в этой сети
 
 
 
