@@ -15,5 +15,15 @@
 ![image](https://github.com/user-attachments/assets/5ec67528-df98-4f78-8a42-0c55e14c38e3)
 
 
+**Часть 2. Ручная настройка IPv6-адресов**
+
+**Шаг 1. Назначьте IPv6-адреса интерфейсам Ethernet на R1.**
+
+a.	Назначьте глобальные индивидуальные IPv6-адреса, указанные в таблице адресации обоим интерфейсам Ethernet на R1.
+
+![image](https://github.com/user-attachments/assets/615fb146-b8dc-410d-aefb-3fb5d185fd7e)
+
+
+
 
 
