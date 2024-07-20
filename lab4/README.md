@@ -12,6 +12,7 @@
 
 **Шаг 2. Настройка коммутатора**
 
+![image](https://github.com/user-attachments/assets/5ec67528-df98-4f78-8a42-0c55e14c38e3)
 
 
 
