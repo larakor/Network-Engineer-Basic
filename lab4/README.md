@@ -1,1 +1,18 @@
-![image](https://github.com/user-attachments/assets/17f687e2-3f7c-42c2-8229-43d14b501745)
+![image](https://github.com/user-attachments/assets/72be1e13-1dc1-4f4d-b10a-6dbe60a9aaa4)
+
+
+**ВЫПОЛНЕНИЕ**
+
+**Часть 1. Настройка топологии и конфигурация основных параметров маршрутизатора и коммутатора**
+
+**Шаг 1. Настройка маршрутизатора**
+
+![image](https://github.com/user-attachments/assets/171fdcad-8db1-426f-a5f1-14f4ce027870)
+
+
+**Шаг 2. Настройка коммутатора**
+
+
+
+
+
