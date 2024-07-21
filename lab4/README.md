@@ -67,14 +67,16 @@ d.	Используйте выбранную команду, чтобы убед
 
 **b.	Проверьте правильность назначения IPv6-адресов интерфейсу управления с помощью команды show ipv6 interface vlan1.**
 
-![image](https://github.com/user-attachments/assets/714f8b48-fefd-4700-b3d3-7ad6befd2185)
+![image](https://github.com/user-attachments/assets/f6990d07-ce64-4611-88f1-1d00bbafd8ee)
 
 
 **Шаг 4. Назначьте компьютерам статические IPv6-адреса.**
 
 **a.	Откройте окно Свойства Ethernet для каждого ПК и назначьте адресацию IPv6.**
 
+![image](https://github.com/user-attachments/assets/f5e8c239-d8a2-4ed0-a92d-58e3cd14e7fa)
 
+![image](https://github.com/user-attachments/assets/dba0e66a-5e38-4028-8e04-07b2f4a297b0)
 
 **b.	Убедитесь, что оба компьютера имеют правильную информацию адреса IPv6. Каждый компьютер должен иметь два глобальных адреса IPv6: один статический и один SLACC.**
 
