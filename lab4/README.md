@@ -99,6 +99,15 @@ d.	Используйте выбранную команду, чтобы убед
 ![image](https://github.com/user-attachments/assets/3abf4593-603f-4254-b484-748977878fd2)
 
 С PC-B отправьте эхо-запрос на PC-A.
+
+![image](https://github.com/user-attachments/assets/b9a99a25-fa45-4baa-8e54-072797a04d50)
+
+
 С PC-B отправьте эхо-запрос на локальный адрес канала G0/0 на R1.
+
+![image](https://github.com/user-attachments/assets/3a51b2bc-9c08-4f87-ae69-f8596747bd19)
+
+
+
 
 
