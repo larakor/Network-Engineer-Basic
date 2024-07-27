@@ -93,9 +93,15 @@ b.	Измените способ входа в систему таким обр�
 ![image](https://github.com/user-attachments/assets/e4a9577e-0845-47e9-812d-48d4f484932c)
 
 **Шаг 6. Установите соединение с маршрутизатором по протоколу SSH.**
+
 a.	Запустите Tera Term с PC-A.
+
 b.	Установите SSH-подключение к R1. Use the username admin and password Adm1nP@55. У вас должно получиться установить SSH-подключение к R1.
 
+![image](https://github.com/user-attachments/assets/e2d3dea5-3888-4255-bd82-490bbb08343d)
+
+
+![image](https://github.com/user-attachments/assets/3db60e6b-a1eb-4d27-953d-1548f911bc04)
 
 
 
