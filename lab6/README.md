@@ -104,8 +104,25 @@ b.	Убедитесь, что VLAN назначены на правильные 
 
 ![image](https://github.com/user-attachments/assets/57ae74ff-6965-4d1b-9fb5-b8e49bb1b5e0)
 
+**Часть 3. Конфигурация магистрального канала стандарта 802.1Q между коммутаторами**
 
+**Шаг 1. Вручную настройте магистральный интерфейс F0/1 на коммутаторах S1 и S2.**
 
+a.	Настройка статического транкинга на интерфейсе F0/1 для обоих коммутаторов.
+
+b.	Установите native VLAN 1000 на обоих коммутаторах.
+
+c.	Укажите, что VLAN 10, 20, 30 и 1000 могут проходить по транку.
+
+![image](https://github.com/user-attachments/assets/68abcd79-522d-4df0-9449-5d6ea32caa7a)
+
+![image](https://github.com/user-attachments/assets/26321269-a52b-424b-8f89-9e019ed31eb9)
+
+d.	Проверьте транки, native VLAN и разрешенные VLAN через транк.
+
+![image](https://github.com/user-attachments/assets/301f16d4-012c-4e9b-8542-b19dd725bf2b)
+
+![image](https://github.com/user-attachments/assets/759f8d06-ac35-4247-80ca-4036d9bca9ba)
 
 
 
