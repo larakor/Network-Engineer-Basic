@@ -148,5 +148,26 @@ b.	Настройте подинтерфейсы для каждой VLAN, ка�
 
 c.	Убедитесь, что вспомогательные интерфейсы работают
 
+![image](https://github.com/user-attachments/assets/a716d231-ff06-40f5-aaee-88efdbd2caa2)
+
+![image](https://github.com/user-attachments/assets/8eb90af0-a4d7-413c-af2f-e67a8040e55d)
+
+![image](https://github.com/user-attachments/assets/2529f5f8-f269-493d-917f-0e3b2daaf41a)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
