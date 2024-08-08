@@ -93,6 +93,65 @@ S2 имеет наименьший Bridge ID - Bridge ID  Priority    32769  (pr
 
 Данный алгоритм выбирает пути, отталкиваясь от корневого моста и определяет альтернативный порт исходя из стоимости, если стоимости одинаковые, то сравнивается BID. Блокируется порт с наивысшим BID.
 
+**Часть 3:	Наблюдение за процессом выбора протоколом STP порта, исходя из стоимости портов**
+
+**Шаг 1:	Определите коммутатор с заблокированным портом.**
+
+![image](https://github.com/user-attachments/assets/d131775e-08c3-4449-9bbf-9dc49ba68729)
+
+![image](https://github.com/user-attachments/assets/7402783b-8fb1-4a03-888f-adfb7e636820)
+
+В данном случае протокол spanning-tree блокирует порт F0/2 на коммутаторе S1 (самым высокий идентификатор BID).
+
+**Шаг 2:	Измените стоимость порта.**
+
+Уменьшаем стоимость порта корневого моста до 18, выполнив команду spanning-tree vlan 1 cost 18 режима конфигурации интерфейса.
+
+![image](https://github.com/user-attachments/assets/4cdeb6de-5143-403e-83b6-3efaf25feb6c)
+
+**Шаг 3:	Просмотрите изменения протокола spanning-tree.**
+
+![image](https://github.com/user-attachments/assets/efe80d10-e12e-4298-94d0-cf3616bbd1dd)
+
+![image](https://github.com/user-attachments/assets/dfa6f972-b28b-4d7a-adfd-f097781c6019)
+
+И теперь заблокированным стал порт на коммутаторе S3 - f0/2. Опять же по принципу наивысшей стоимости порта.
+
+**Шаг 4:	Удалите изменения стоимости порта.**
+
+**a.	Выполните команду no spanning-tree vlan 1 cost 18 режима конфигурации интерфейса, чтобы удалить запись стоимости, созданную ранее.**
+
+![image](https://github.com/user-attachments/assets/549f5b69-f962-4e67-ac9b-0b82f2798ca2)
+
+**b.	Повторно выполните команду show spanning-tree**
+
+![image](https://github.com/user-attachments/assets/5db884e5-1c4f-428b-812b-49354e825411)
+
+![image](https://github.com/user-attachments/assets/7d0b10bf-e734-4900-ab75-cdd5d752cb9b)
+
+Порты снова вернулись в первоначальное состояние.
+
+**Часть 4:	Наблюдение за процессом выбора протоколом STP порта, исходя из приоритета портов**
+
+**a.	Включите порты F0/1 и F0/3 на всех коммутаторах.**
+
+![image](https://github.com/user-attachments/assets/465f63c5-c908-463e-9a89-599bdb0c775d)
+
+![image](https://github.com/user-attachments/assets/e4fcd9de-7646-4a1c-886c-92db8bb5a4c7)
+
+![image](https://github.com/user-attachments/assets/83f08594-aa98-447f-aa64-a2e3c01c646a)
+
+**b.	Выполните команду show spanning-tree на коммутаторах некорневого моста.** 
+
+![image](https://github.com/user-attachments/assets/15c44f63-1c77-4967-bd00-4aa6c65a89bf)
+
+![image](https://github.com/user-attachments/assets/c6ada6d2-e314-4479-aeaf-59fd585418bd)
+
+Теперь порт корневого моста переместился на порт с меньшим номером - f0/3, заблокировал предыдущий порт корневого моста - f0/4.
+
+![image](https://github.com/user-attachments/assets/ce15ae2d-df0f-43c5-9959-f39882a3ede6)
+
+Во всех случаях выбирается наименьшее значение
 
 
 
