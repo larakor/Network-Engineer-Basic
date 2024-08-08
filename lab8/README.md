@@ -144,6 +144,7 @@ a.	Назначьте используемые порты соответству
 
 ![image](https://github.com/user-attachments/assets/2e53b791-d9e5-4e1e-8425-50d678b316b3)
 
+![image](https://github.com/user-attachments/assets/6191835a-2264-4fbc-a14f-8fec46c8b93d)
 
 b.	Убедитесь, что VLAN назначены на правильные интерфейсы.
 
@@ -161,10 +162,14 @@ c.	В качестве другой части конфигурации маги
 d.	Сохраните текущую конфигурацию в файл загрузочной конфигурации.
 
 e.	Проверьте состояние транка.
-Вопрос:
-Какой IP-адрес был бы у ПК, если бы он был подключен к сети с помощью DHCP?
 
+![image](https://github.com/user-attachments/assets/47e42800-18a3-42d9-9d9f-795b27a13f49)
 
+![image](https://github.com/user-attachments/assets/51ac5cc4-5505-4b25-bda2-d77a897001b4)
+
+![image](https://github.com/user-attachments/assets/bc785a16-b580-4dfb-ba2d-1457d1edd6e2)
+
+![image](https://github.com/user-attachments/assets/a0cbec95-c832-4e2a-b1b5-1c8800c40507)
 
 
 
