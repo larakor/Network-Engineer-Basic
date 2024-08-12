@@ -71,6 +71,7 @@ d.	Сохраните текущую конфигурацию в файл заг
 
 ![image](https://github.com/user-attachments/assets/b12a560d-d0b2-41ce-895a-94d1cf80ee4b)
 
+![image](https://github.com/user-attachments/assets/d47b9c20-98fa-41e3-b923-52843f581545)
 
 
 
