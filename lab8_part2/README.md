@@ -73,7 +73,38 @@ d.	Сохраните текущую конфигурацию в файл заг
 
 ![image](https://github.com/user-attachments/assets/d47b9c20-98fa-41e3-b923-52843f581545)
 
+**Часть 2. Проверка назначения адреса SLAAC от R1**
 
+![image](https://github.com/user-attachments/assets/c1bab9cf-3830-4906-a945-920c328bf31d)
+
+![image](https://github.com/user-attachments/assets/85a0bf5f-2726-467e-8664-6c77fab127bc)
+
+Последние 4 октета добавляются из Link-local IPv6 Address
+
+**Часть 3. Настройка и проверка сервера DHCPv6 на R1**
+
+**Шаг 1. Более подробно изучите конфигурацию PC-A.**
+
+![image](https://github.com/user-attachments/assets/1c977874-cbf6-4c33-aa6b-fc5fe85cbe55)
+
+**Шаг 2. Настройте R1 для предоставления DHCPv6 без состояния для PC-A.**
+
+**a.	Создайте пул DHCP IPv6 на R1 с именем R1-STATELESS. В составе этого пула назначьте адрес DNS-сервера как 2001:db8:acad: :1, а имя домена — как stateless.com.**
+
+b.	Настройте интерфейс G0/0/1 на R1, чтобы предоставить флаг конфигурации OTHER для локальной сети R1 и укажите только что созданный пул DHCP в качестве ресурса DHCP для этого интерфейса.
+
+c.	Сохраните текущую конфигурацию в файл загрузочной конфигурации.
+
+![image](https://github.com/user-attachments/assets/7bca6277-54d4-4cd8-93b5-5b3b7753af8c)
+
+d.	Перезапустите PC-A.
+
+e.	Проверьте вывод ipconfig /all и обратите внимание на изменения.
+
+![image](https://github.com/user-attachments/assets/390e9074-463b-4b62-a389-7b1544f9e36f)
+
+
+f.	Тестирование подключения с помощью пинга IP-адреса интерфейса G0/1 R2.
 
 
 
