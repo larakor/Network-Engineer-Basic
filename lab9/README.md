@@ -109,8 +109,61 @@ b.	Убедитесь, что неиспользуемые порты отклю
 
 ![image](https://github.com/user-attachments/assets/24bf09c4-d68d-49e1-8efa-2fac9d191cb6)
 
+**Шаг 4. Документирование и реализация функций безопасности порта.**
 
+a.	На S1, введите команду show port-security interface f0/6  для отображения настроек по умолчанию безопасности порта для интерфейса F0/6. 
 
+![image](https://github.com/user-attachments/assets/9ef3b2b9-0f7f-46b4-a8c6-5a8973072c2d)
+
+b.	На S1 включите защиту порта на F0 / 6 со следующими настройками:
+
+o	Максимальное количество записей MAC-адресов: 3
+
+o	Режим безопасности: restrict
+
+o	Aging time: 60 мин.
+
+o	Aging type: неактивный
+
+![image](https://github.com/user-attachments/assets/dbb4d2a4-1f37-4d45-b45c-905feb2a4a90)
+
+Последняя команда не поддерживается
+
+c.	Verify port security on S1 F0/6. S1# show port-security interface f0/6    S1# show port-security address
+
+![image](https://github.com/user-attachments/assets/7e8844ff-e047-4752-a12a-dce034da771e)
+
+![image](https://github.com/user-attachments/assets/97176a01-1db4-458e-a76b-962f19f5022c)
+
+d.	Включите безопасность порта для F0 / 18 на S2. Настройте каждый активный порт доступа таким образом, чтобы он автоматически добавлял адреса МАС, изученные на этом порту, в текущую конфигурацию.
+
+![image](https://github.com/user-attachments/assets/5b40d24d-0174-40d3-b6d1-eb6b2ab19287)
+
+e.	Настройте следующие параметры безопасности порта на S2 F / 18:
+
+o	Максимальное количество записей MAC-адресов: 2
+
+o	Тип безопасности: Protect
+
+o	Aging time: 60 мин.
+
+![image](https://github.com/user-attachments/assets/e792cf5e-625b-48b7-b10e-5a9ddee3eb65)
+
+f.	Проверка функции безопасности портов на S2 F0/18.  S2# show port-security interface f0/18    S2# show port-security address
+
+![image](https://github.com/user-attachments/assets/007e690f-1e06-4e73-b4b5-14b46ad8870c)
+
+![image](https://github.com/user-attachments/assets/e9601fa2-00dc-4f36-8c5d-5d130a411ba1)
+
+**Шаг 5. Реализовать безопасность DHCP snooping.**
+
+a.	На S2 включите DHCP snooping и настройте DHCP snooping во VLAN 10.
+
+b.	Настройте магистральные порты на S2 как доверенные порты.
+
+c.	Ограничьте ненадежный порт Fa0/18 на S2 пятью DHCP-пакетами в секунду.
+
+d.	Проверка DHCP Snooping на S2.  S2# show ip dhcp snooping
 
 
 
