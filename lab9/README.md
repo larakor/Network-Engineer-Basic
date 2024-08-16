@@ -58,9 +58,9 @@ d.	Установите для шлюза по умолчанию для VLAN у
 
 ![image](https://github.com/user-attachments/assets/277642a7-8560-4fd1-ab50-b33586433533)
 
-![image](https://github.com/user-attachments/assets/bcbe8adc-2a58-4562-9cb1-6966ab7d5aab)
+![image](https://github.com/user-attachments/assets/dd9c343c-a640-477d-a082-806e5e6cd04f)
 
-![image](https://github.com/user-attachments/assets/a5794071-bec3-4f8d-8d9f-e804e782cd65)
+![image](https://github.com/user-attachments/assets/2af8a7ff-5359-4130-8535-000cca4d7e2b)
 
 **Часть 3. Настройки безопасности коммутатора.**
 
