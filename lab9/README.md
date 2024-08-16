@@ -56,6 +56,46 @@ d.	Установите для шлюза по умолчанию для VLAN у
 
 **Шаг 4. Настройте VLAN 999 с именем ParkingLot на S1 и S2.**
 
+![image](https://github.com/user-attachments/assets/277642a7-8560-4fd1-ab50-b33586433533)
+
+![image](https://github.com/user-attachments/assets/bcbe8adc-2a58-4562-9cb1-6966ab7d5aab)
+
+![image](https://github.com/user-attachments/assets/a5794071-bec3-4f8d-8d9f-e804e782cd65)
+
+**Часть 3. Настройки безопасности коммутатора.**
+
+**Шаг 1. Релизация магистральных соединений 802.1Q.**
+
+a.	Настройте все магистральные порты Fa0/1 на обоих коммутаторах для использования VLAN 333 в качестве native VLAN.
+
+b.	Убедитесь, что режим транкинга успешно настроен на всех коммутаторах.
+S1# show interface trunk
+
+![image](https://github.com/user-attachments/assets/5e647a65-f22d-4eef-a734-02deffa83778)
+
+![image](https://github.com/user-attachments/assets/10cb36d4-2e78-4bb2-852f-ba31093d0b17)
+
+![image](https://github.com/user-attachments/assets/a904b0fd-8156-448b-a9ca-354640508092)
+
+c.	Отключить согласование DTP F0/1 на S1 и S2. 
+
+d.	Проверьте с помощью команды show interfaces.
+
+![image](https://github.com/user-attachments/assets/17af4dd4-0621-487c-9449-1835e01cdd6d)
+
+![image](https://github.com/user-attachments/assets/1669cb74-a6fb-4b67-94e9-c475b6523791)
+
+**Шаг 2. Настройка портов доступа**
+
+a.	На S1 настройте F0/5 и F0/6 в качестве портов доступа и свяжите их с VLAN 10.
+
+b.	На S2 настройте порт доступа Fa0/18 и свяжите его с VLAN 10.
+
+
+
+
+
+
 
 
 
