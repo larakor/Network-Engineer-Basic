@@ -101,11 +101,13 @@ a.	На S1 и S2 переместите неиспользуемые порты 
 
 ![image](https://github.com/user-attachments/assets/e5a36ff6-7b23-453e-a5d8-fc6f8df0b82a)
 
-![image](https://github.com/user-attachments/assets/c0a4d135-ae2e-4a8e-945f-41e6296a1446)
+![image](https://github.com/user-attachments/assets/688c9928-642c-4723-b26a-997e43c6d077)
 
 b.	Убедитесь, что неиспользуемые порты отключены и связаны с VLAN 999, введя команду  show.
-S1# show interfaces status
 
+![image](https://github.com/user-attachments/assets/67ea96f0-739d-407e-8557-db6a1883121a)
+
+![image](https://github.com/user-attachments/assets/24bf09c4-d68d-49e1-8efa-2fac9d191cb6)
 
 
 
