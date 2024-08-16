@@ -89,11 +89,22 @@ d.	Проверьте с помощью команды show interfaces.
 
 a.	На S1 настройте F0/5 и F0/6 в качестве портов доступа и свяжите их с VLAN 10.
 
+![image](https://github.com/user-attachments/assets/aa0ae08c-d367-4201-9a0a-edb2369a0167)
+
 b.	На S2 настройте порт доступа Fa0/18 и свяжите его с VLAN 10.
 
+![image](https://github.com/user-attachments/assets/285886df-0b0e-45a8-acfe-2d27edc7ba6b)
 
+**Шаг 3. Безопасность неиспользуемых портов коммутатора**
 
+a.	На S1 и S2 переместите неиспользуемые порты из VLAN 1 в VLAN 999 и отключите неиспользуемые порты.
 
+![image](https://github.com/user-attachments/assets/e5a36ff6-7b23-453e-a5d8-fc6f8df0b82a)
+
+![image](https://github.com/user-attachments/assets/c0a4d135-ae2e-4a8e-945f-41e6296a1446)
+
+b.	Убедитесь, что неиспользуемые порты отключены и связаны с VLAN 999, введя команду  show.
+S1# show interfaces status
 
 
 
