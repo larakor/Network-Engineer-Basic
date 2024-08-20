@@ -131,9 +131,7 @@ o	Aging type: неактивный
 
 c.	Verify port security on S1 F0/6. S1# show port-security interface f0/6    S1# show port-security address
 
-![image](https://github.com/user-attachments/assets/7e8844ff-e047-4752-a12a-dce034da771e)
-
-![image](https://github.com/user-attachments/assets/97176a01-1db4-458e-a76b-962f19f5022c)
+![image](https://github.com/user-attachments/assets/77ce7c2a-7a36-4708-a07c-08e189e2faa6)
 
 d.	Включите безопасность порта для F0 / 18 на S2. Настройте каждый активный порт доступа таким образом, чтобы он автоматически добавлял адреса МАС, изученные на этом порту, в текущую конфигурацию.
 
@@ -151,9 +149,8 @@ o	Aging time: 60 мин.
 
 f.	Проверка функции безопасности портов на S2 F0/18.  S2# show port-security interface f0/18    S2# show port-security address
 
-![image](https://github.com/user-attachments/assets/007e690f-1e06-4e73-b4b5-14b46ad8870c)
+![image](https://github.com/user-attachments/assets/ea7e8ff9-c768-400a-8b30-7ae25b656aa5)
 
-![image](https://github.com/user-attachments/assets/e9601fa2-00dc-4f36-8c5d-5d130a411ba1)
 
 **Шаг 5. Реализовать безопасность DHCP snooping.**
 
@@ -164,6 +161,29 @@ b.	Настройте магистральные порты на S2 как до�
 c.	Ограничьте ненадежный порт Fa0/18 на S2 пятью DHCP-пакетами в секунду.
 
 d.	Проверка DHCP Snooping на S2.  S2# show ip dhcp snooping
+
+![image](https://github.com/user-attachments/assets/1f35e7c5-62a0-4520-8886-5d97a3cf704d)
+
+e.	В командной строке на PC-B освободите, а затем обновите IP-адрес.
+
+C:\Users\Student> ipconfig /release
+
+C:\Users\Student> ipconfig /renew
+
+f.	Проверьте привязку отслеживания DHCP с помощью команды show ip dhcp snooping binding.  S2# show ip dhcp snooping binding 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
