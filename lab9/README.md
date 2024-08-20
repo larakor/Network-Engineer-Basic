@@ -166,16 +166,41 @@ d.	Проверка DHCP Snooping на S2.  S2# show ip dhcp snooping
 
 e.	В командной строке на PC-B освободите, а затем обновите IP-адрес.
 
+![image](https://github.com/user-attachments/assets/90a6cd7f-f98f-45b9-8008-e75e748c68ac)
+
 C:\Users\Student> ipconfig /release
 
 C:\Users\Student> ipconfig /renew
 
+![image](https://github.com/user-attachments/assets/e94a1565-96ae-4626-962d-20df3213e4e2)
+
 f.	Проверьте привязку отслеживания DHCP с помощью команды show ip dhcp snooping binding.  S2# show ip dhcp snooping binding 
 
+![image](https://github.com/user-attachments/assets/1715402d-f96c-4300-b018-908bb6645308)
 
+**Шаг 6. Реализация PortFast и BPDU Guard**
 
+a.	Настройте PortFast на всех портах доступа, которые используются на обоих коммутаторах.
 
+![image](https://github.com/user-attachments/assets/4ab86e5f-64f8-4484-a3a8-db7c59a82efb)
 
+![image](https://github.com/user-attachments/assets/4c2f4ae0-3702-475a-a0cc-47e6cfe7109d)
+
+b.	Включите защиту BPDU на портах доступа VLAN 10 S1 и S2, подключенных к PC-A и PC-B.
+
+![image](https://github.com/user-attachments/assets/6baa7683-0da8-4708-94f1-912d2481af62)
+
+![image](https://github.com/user-attachments/assets/13225f35-a4eb-4297-8d92-4ca8c4adedc4)
+
+c.	Убедитесь, что защита BPDU и PortFast включены на соответствующих портах.
+
+![image](https://github.com/user-attachments/assets/be09eda1-422b-4a68-8445-e522a76e56c1)
+
+**Шаг 7. Проверьте наличие сквозного ⁪подключения.**
+
+![image](https://github.com/user-attachments/assets/781630f6-b61a-44da-889b-01b73d04261d)
+
+![image](https://github.com/user-attachments/assets/afcdf942-034a-4cfa-942c-8ff2ca55ca77)
 
 
 
