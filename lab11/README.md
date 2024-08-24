@@ -252,21 +252,23 @@ b.	Настройте R1 для проверки подлинности поль
 
 ![image](https://github.com/user-attachments/assets/59a68f28-795b-48e1-9cc7-cae78bfe2901)
 
-
-
-
-
-
-
 **Шаг 3. Убедитесь, что политики безопасности применяются развернутыми списками доступа.**
 
+![image](https://github.com/user-attachments/assets/735c05ad-02af-4497-bf37-9460853aac7d)
 
+![image](https://github.com/user-attachments/assets/15adcf9f-8ac5-4ca9-93c7-280fe5eb4202)
 
+![image](https://github.com/user-attachments/assets/1f22cb1a-5e99-44d1-81f2-02b89f345594)
 
+![image](https://github.com/user-attachments/assets/34a57d9b-0ca6-4bf9-a6ff-bc04b0e8d833)
 
+![image](https://github.com/user-attachments/assets/57cbe8f7-dd1d-4522-a20f-ee62b0c43006)
 
+![image](https://github.com/user-attachments/assets/fb03a920-61bf-457c-a697-f00acc42197f)
 
+![image](https://github.com/user-attachments/assets/f07249bb-5e81-403c-870b-a77d16329c30)
 
+![image](https://github.com/user-attachments/assets/18da6438-ef38-4857-9176-2eed467034b8)
 
 
 
