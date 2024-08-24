@@ -98,7 +98,15 @@ b.	В рамках конфигурации транка установите д
 
 c.	В качестве другой части конфигурации транка укажите, что VLAN 10, 20, 30 и 1000 разрешены в транке.
 
+![image](https://github.com/user-attachments/assets/ad63f604-9ae0-49ba-aa83-516b2b1d5186)
+
+![image](https://github.com/user-attachments/assets/ba61b4b3-59e8-43c5-b1dc-82e63aa140e0)
+
 d.	Выполните команду show interfaces trunk для проверки портов магистрали, собственной VLAN и разрешенных VLAN через магистраль.
+
+![image](https://github.com/user-attachments/assets/1acddeaa-3200-4242-b6ee-10022d04acb9)
+
+![image](https://github.com/user-attachments/assets/0b8af357-ac61-4de7-bcb9-cc7ea56b3ba2)
 
 **Шаг 2. Вручную настройте магистральный интерфейс F0/5 на коммутаторе S1.**
 
@@ -106,9 +114,35 @@ a.	Настройте интерфейс S1 F0/5 с теми же парамет
 
 b.	Сохраните текущую конфигурацию в файл загрузочной конфигурации.
 
-c.	Используйте команду show interfaces trunk для проверки настроек транка.
+![image](https://github.com/user-attachments/assets/56c787fe-451a-4caa-ad52-6e8b94b387e4)
 
+c.	Используйте команду show interfaces trunk для проверки настроек транка. (перед этим разблокировав порт на R1)
 
+![image](https://github.com/user-attachments/assets/6e386198-cbaa-410d-a088-d7fe0192670d)
+
+**Часть 4. Настройте маршрутизацию.**
+
+**Шаг 1. Настройка маршрутизации между сетями VLAN на R1.**
+
+a.	Активируйте интерфейс G0/0/1 на маршрутизаторе.
+
+![image](https://github.com/user-attachments/assets/c3bf8425-d0c0-413e-8009-e7e669c44a6c)
+
+b.	Настройте подинтерфейсы для каждой VLAN, как указано в таблице IP-адресации. Все подинтерфейсы используют инкапсуляцию 802.1Q. Убедитесь, что подинтерфейс для собственной VLAN не имеет назначенного IP-адреса. Включите описание для каждого подинтерфейса.
+
+![image](https://github.com/user-attachments/assets/6618a351-29c2-4394-b954-e04fbe9732e8)
+
+![image](https://github.com/user-attachments/assets/e0e23aef-9843-4d70-a531-aaa7c4c5ef38)
+
+c.	Настройте интерфейс Loopback 1 на R1 с адресацией из приведенной выше таблицы.
+
+![image](https://github.com/user-attachments/assets/62ef3667-d0a2-47e2-8e06-c6f030ddc7ba)
+
+d.	С помощью команды show ip interface brief проверьте конфигурацию подынтерфейса.
+
+![image](https://github.com/user-attachments/assets/1fe6fc0a-b7f6-49ad-b228-5314ab3d0ee2)
+
+**Шаг 2. Настройка интерфейса R2 g0/0/1 с использованием адреса из таблицы и маршрута по умолчанию с адресом следующего перехода 10.20.0.1**
 
 
 
