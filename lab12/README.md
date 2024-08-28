@@ -90,20 +90,61 @@ e.	Определите внешний (outside) интерфейс.
 
 a.	С PC-B,  запустите эхо-запрос интерфейса Lo1 (209.165.200.1) на R2. Если эхо-запрос не прошел, выполните процес поиска и устранения неполадок. 
 
+![image](https://github.com/user-attachments/assets/83bd366b-7208-42e2-90a9-a2159091205c)
+
 ![image](https://github.com/user-attachments/assets/74d59700-78ee-4429-a05b-5f2396524362)
 
 На R1 отобразите таблицу NAT на R1 с помощью команды show ip nat translations.    R1# show ip nat translations
 
+![image](https://github.com/user-attachments/assets/9bec2367-1a5b-47e0-8abf-a46a275ab46b)
 
+*Во что был транслирован внутренний локальный адрес PC-B?*  209.165.200.226
+
+*Какой тип адреса NAT является переведенным адресом?* Inside
+
+b.	С PC-A, запустите  эхо-запрос интерфейса Lo1 (209.165.200.1) на R2. Если эхо-запрос не прошел, выполните отладку. На R1 отобразите таблицу NAT на R1 с помощью команды show ip nat translations.
+
+![image](https://github.com/user-attachments/assets/8ca78acf-4df5-4b07-b7e6-13a2ac8e34bf)
+
+![image](https://github.com/user-attachments/assets/1a5bc56e-2e37-42a0-8f58-6d71581e0d72)
+
+R1# show ip nat translations 
+
+c.	Из S1, эхо-запрос интерфейса Lo1 (209.165.200.1) на R2. Если эхо-запрос не прошел, выполните отладку. На R1 отобразите таблицу NAT на R1 с помощью команды show ip nat translations.
+
+![image](https://github.com/user-attachments/assets/c5824ec2-a166-4e7f-b2cd-f81f16d798d3)
+
+R1# show ip nat translations
 Pro Inside global Inside local Outside local Outside global
---- 209.165.200.226 192.168.1.3 --- --- 
-226:1 192.168.1. 3:1 209.165.200. 1:1 209.165.200. 1:1 
-Total number of translations: 2
-Вопросы:
-Во что был транслирован внутренний локальный адрес PC-B?
-Введите ваш ответ здесь.
- 
-Какой тип адреса NAT является переведенным адресом?
+--- 209.165.200.227 192.168.1.2 --- ---
+--- 209.165.200.226 192.168.1.3 --- ---
+--- 209.165.200.228 192.168.1.11 --- ---
+226:1 192.168.1. 3:1 209.165.200. 1:1 209.165.200. 1:1
+228:0 192.168.1. 11:0 209.165.200. 1:0 209.165.200. 1:0 209.165.200. 1:0
+Total number of translations: 5
+d.	Теперь запускаем пинг R2 Lo1 из S2. На этот раз перевод завершается неудачей, и вы получаете эти сообщения (или аналогичные) на консоли R1:
+Sep 23 15:43:55.562: %IOSXE-6-PLATFORM: R0/0: cpp_cp: QFP:0.0 Thread:000 TS:00000001473688385900 %NAT-6-ADDR_ALLOC_FAILURE: Address allocation failed; pool 1 may be exhausted [2]
+e.	Это ожидаемый результат, потому что выделено только 3 адреса, и мы попытались ping Lo1 с четырех устройств. Напомним, что NAT — это трансляция «один-в-один». Как много выделено трансляций? Введите команду show ip nat translations verbose , и вы увидите, что ответ будет 24 часа.
+R1# show ip nat translations verbose 
+Pro Inside global Inside local Outside local Outside global
+--- 209.165.200.226 192.168.1.3 --- ---
+  create: 09/23/19 15:35:27, use: 09/23/19 15:35:27, timeout: 23:56:42
+  Map-Id(In): 1
+<output omitted>
+f.	Учитывая, что пул ограничен тремя адресами, NAT для пула адресов недостаточно для нашего приложения. Очистите преобразование NAT и статистику, и мы перейдем к PAT.
+R1# clear ip nat translations * 
+R1# clear ip nat statistics 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
