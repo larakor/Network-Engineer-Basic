@@ -188,31 +188,27 @@ b.	Сделайте трафик с нескольких устройств дл
 
 **Шаг 1. На R1 очистите текущие трансляции и статистику.**
 
-R1# clear ip nat translations * 
-R1# clear ip nat statistics 
-
 **Шаг 2. На R1 настройте команду NAT, необходимую для статического сопоставления внутреннего адреса с внешним адресом.**
 Для этого шага настройте статическое сопоставление между 192.168.1.11 и 209.165.200.1 с помощью следующей команды:
-R1(config)# ip nat inside source static 192.168.1.2 209.165.200.229 
+
+![image](https://github.com/user-attachments/assets/69092f7a-0d9f-42f6-b1bd-8f4fc6886736)
 
 **Шаг 3. Протестируйте и проверьте конфигурацию.**
 
 a.	Давайте проверим, что статический NAT работает. На R1 отобразите таблицу NAT на R1 с помощью команды show ip nat translations, и вы увидите статическое сопоставление.
-R1# show ip nat translations
-Pro Inside global Inside local Outside local Outside global
---- 209.165.200.229 192.168.1.2 --- ---
-Total number of translations: 1
+
+![image](https://github.com/user-attachments/assets/52ed4ac1-6907-4e71-8125-f557f605cd78)
 
 b.	Таблица перевода показывает, что статическое преобразование действует. Проверьте это, запустив ping  с R2 на 209.165.200.229. Плинги должны работать.
 Примечание. Возможно, вам придется отключить брандмауэр ПК для работы pings.
 
+![image](https://github.com/user-attachments/assets/49f5020b-1192-4a67-9f56-2af79cf146ed)
+
 c.	На R1 отобразите таблицу NAT на R1 с помощью команды show ip nat translations, и вы увидите статическое сопоставление и преобразование на уровне порта для входящих pings.
-R1# show ip nat translations
-Pro Inside global Inside local Outside local Outside global
---- 209.165.200.229 192.168.1.2 --- ---
-229:3 192.168.1. 2:3 209.165.200. 225:3 209.165.200. 225:3 209.165.200. 
-Total number of translations: 2
+
 Это подтверждает, что статический NAT работает.
+
+![image](https://github.com/user-attachments/assets/e344c57e-525e-424b-9a92-e167d419dca5)
 
 
 
